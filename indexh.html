@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Higher/Lower</title>
     <link rel="stylesheet" href="styleh.css">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <video autoplay muted loop id="myVideo" class="hide">
@@ -19,7 +20,10 @@
     </div>
     <div id="wrapper" class="hide">
         <div id="game-container">
-            <input type="text" id="skaicius" name="skaicius" placeholder="Įveskite savo spėjimą">
+            <input type="text" id="skaicius" name="skaicius" maxlength="3" placeholder="Įveskite savo spėjimą...">
+        </div>
+        <div id="rezultatai">
+            <h2>ejimai</h2>
         </div>
     </div>
     <script src="mainh.js"></script>

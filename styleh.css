@@ -1,16 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "play";
 }
-html {
-    height: 100%;
-}
+
 #wrapper {
     background-image: url("zaidimoback.webp");
     background-position: center;
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -23,9 +24,19 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 15%;
+}
+#rezultatai {
+    background: black;
+    color: #0e6b0e;
+    height: 30%;
+    width: 45%;
+    margin-top: 50px;
 }
 #skaicius {
-
+    width: 45%;
+    height: 30%;
+    font-size: 20px;
 }
 #main-menu {
     display: none;
@@ -63,6 +74,7 @@ html {
     width: 80%;
     font-size: 30px;
     border-radius: 80px;
+    background: black;
     color: white;
     transition: background 0.75s ease-in-out;
     transition: color 0.75s ease-in-out;
@@ -78,6 +90,7 @@ html {
     font-size: 30px;
     border-radius: 80px;
     color: white;
+    background: black;
     transition: background 0.75s ease-in-out;
     transition: color 0.75s ease-in-out;
 }
