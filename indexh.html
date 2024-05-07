@@ -8,11 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <video autoplay muted loop id="myVideo" class="hide">
+    <video autoplay muted loop id="myVideo" class="active">
         <source src="mainback.mp4" type="video/mp4">
       </video>
 
-    <div id="main-menu" class="hide">
+    <div id="main-menu" class="active">
         <div id="button-menu">
             <button id="startbtn">Pradėti žaidimą</button>
             <button id="rulesbtn">Taisyklės</button>
@@ -23,7 +23,16 @@
             <input type="text" id="skaicius" name="skaicius" maxlength="3" placeholder="Įveskite savo spėjimą...">
         </div>
         <div id="rezultatai">
-            <h2>ejimai</h2>
+            <div id="ejimai"></div>
+        </div>
+    </div>
+    <div id="taisykles" class="hide">
+        <div id="dezute">
+            <h1>Taisyklės</h1>
+            <h2>1) Rodyklė į viršų rodo, kad jūsų skaičius didesnis už ieškomą, į apačią - mažesnis.</h2>
+            <h2>2) Didžiausias įmanomas skaičius - 999, mažiausias - 0.</h2>
+            <h2>3) Spalva nurodo, kiek jūsų skaičius skiriasi nuo ieškomo: raudona - skiriasi daugiau nei 50, geltona - skiriasi 50-25, žalia - skiriasi mažiau nei 50.</h2>
+            <button id="backbtn">Atgal</button>
         </div>
     </div>
     <script src="mainh.js"></script>
