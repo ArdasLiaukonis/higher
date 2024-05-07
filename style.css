@@ -125,10 +125,10 @@
     background: black;
     position: absolute;
     width: 40%;
-    height: 80%;
+    height: 80vh;
     opacity: 70%;
     border-radius: 30px;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 30%;
     margin-right: 30%;
     color: white;
@@ -139,7 +139,7 @@
 }
 #dezute h2 {
     padding-top: 20px;
-    padding-left: 10px;
+    padding-left: 20px;
     text-align: left;
     font-size: 38px;
 }
