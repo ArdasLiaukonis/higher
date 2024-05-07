@@ -3,8 +3,10 @@
     padding: 0;
     font-family: "play";
 }
-
-#wrapper {
+.hide {
+    display: none;
+}
+.wrapper {
     background-image: url("zaidimoback.gif");
     background-position: center;
     background-size: cover;
@@ -26,6 +28,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 15%;
+    border-radius: 18px;
 }
 #rezultatai {
     background: black;
@@ -33,11 +36,13 @@
     height: 30%;
     width: 45%;
     margin-top: 50px;
+    border-radius: 50px;
 }
 #skaicius {
     width: 45%;
     height: 30%;
     font-size: 20px;
+    border-radius: 20px;
 }
 #main-menu {
     position: fixed;
@@ -105,9 +110,6 @@
     color: black;
     border-color: grey;
 }
-.hide {
-    display: none;
-}
 
 #taisykles {
     width: 100%;
@@ -160,3 +162,4 @@
     transition: border-color 0.75s ease-in-out;
     transition: color 0.75s ease-in-out;
 }
+

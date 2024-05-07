@@ -1,7 +1,7 @@
 const startButton = document.getElementById("startbtn");
 const video = document.getElementById("myVideo");
 const mainMenu = document.getElementById("main-menu");
-const wrapper = document.getElementsByTagName("wrapper");
+const wrapper = document.querySelector(".wrapper");
 const rulesButton = document.getElementById("rulesbtn");
 const taisykles = document.getElementById("taisykles");
 
@@ -12,7 +12,7 @@ let seconds = 0, minutes = 0;
 let movesCount = 0;
 
 
-startButton.addEventListener("click", () =>{
+startButton.addEventListener("click", () => {
     movesCount = 0;
     seconds = 0;
     minutes = 0;
@@ -21,10 +21,12 @@ startButton.addEventListener("click", () =>{
     wrapper.classList.remove("hide");
 });
 
-rulesButton.addEventListener("click", () =>{
+rulesButton.addEventListener("click", () => {
     mainMenu.classList.add("hide");
     video.classList.add("hide");
     taisykles.classList.remove("hide");
+    wrapper.classList.remove("wrapper");
+    wrapper.classList.add("hide");
 });
 
 
