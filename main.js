@@ -4,7 +4,7 @@ const mainMenu = document.getElementById("main-menu");
 const wrapper = document.querySelector(".wrapper");
 const rulesButton = document.getElementById("rulesbtn");
 const taisykles = document.getElementById("taisykles");
-
+const backButton = document.getElementById("backbtn");
 
 
 
@@ -28,6 +28,12 @@ rulesButton.addEventListener("click", () => {
     wrapper.classList.remove("wrapper");
     wrapper.classList.add("hide");
 });
+
+backButton.addEventListener("click", () =>{
+    taisykles.classList.add("hide");
+    mainMenu.classList.remove("hide");
+    video.classList.remove("hide");
+})
 
 
 const timeGenerator = () => {
