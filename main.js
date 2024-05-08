@@ -42,7 +42,9 @@ const timeGenerator = () => {
       minutes += 1;
       seconds = 0;
     }
-}
+};
+
+
 const movesCounter = () => {
     movesCount += 1;
     ejimai.innerHTML = `<span>Ejimai:</span>${movesCount}`;
