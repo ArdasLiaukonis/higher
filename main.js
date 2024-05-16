@@ -19,6 +19,9 @@ startButton.addEventListener("click", () => {
     mainMenu.classList.add("hide");
     video.classList.add("hide");
     wrapper.classList.remove("hide");
+    timeGenerator();
+    let numeris = Math.floor(Math.random() * (999 - 1 + 1)) + 1;
+    console.log(numeris);
 });
 
 rulesButton.addEventListener("click", () => {
