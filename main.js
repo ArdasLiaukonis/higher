@@ -8,11 +8,15 @@ const backButton = document.getElementById("backbtn");
 const timeValue = document.getElementById("laikas");
 const moves = document.getElementById("ejimai");
 const spejimas = document.getElementById("skaicius");
+const asnwerButton = document.getElementById("priimti");
+const endScreen = document.getElementById("end-screen");
+const rodykle = document.getElementById("rodykle");
+const spalva = document.getElementById("spalva");
 
 
 let seconds = 0, minutes = 0;
 let movesCount = 0;
-
+let numeris = Math.floor(Math.random() * (999 - 1 + 1)) + 1;
 
 startButton.addEventListener("click", () => {
     movesCount = 0;
@@ -21,15 +25,44 @@ startButton.addEventListener("click", () => {
     mainMenu.classList.add("hide");
     video.classList.add("hide");
     wrapper.classList.remove("hide");
-    let numeris = Math.floor(Math.random() * (999 - 1 + 1)) + 1;
-    console.log(numeris);
     interval = setInterval(timeGenerator, 1000);
-    moves.innerHTML = `<span>Spėjimų skaičius:</span> ${movesCount}`;
+    console.log(numeris);
 });
 
+asnwerButton.addEventListener("click", () => {
+  const inputValue = spejimas.value;
+  spejimas.value = Number;
+  spejimas.value = "";
+  console.log(inputValue);
+  movesCounter ();
+  if (inputValue == numeris) {
+    endGame ();
+  };
+  if (inputValue > numeris){
+    rodykle.style.backgroundImage="url(zalia.png)";
+    rodykle.style.backgroundColor = "black";
+  }
+  else if (inputValue < numeris) {
+    rodykle.style.backgroundColor = "black";
+    rodykle.style.backgroundImage="url(raudona.png)";
+  }
+  if (Math.abs(inputValue - numeris)<= 25) {
+    spalva.style.backgroundColor = "green";
+  }
+  else if (Math.abs(inputValue - numeris) <= 50) {
+    spalva.style.backgroundColor = "yellow";
+  }
+  else {
+    spalva.style.backgroundColor = "red";
+  }
+});
 
-const inputValue = spejimas.value;
-console.log(inputValue);
+const endGame = () => {
+  wrapper.classList.remove("wrapper");
+  wrapper.classList.add("hide");
+  endScreen.classList.remove("hide");
+};
+
 
 rulesButton.addEventListener("click", () => {
     mainMenu.classList.add("hide");
@@ -58,6 +91,6 @@ const timeGenerator = () => {
   };
   const movesCounter = () => {
     movesCount += 1;
-    moves.innerHTML = `<span>Ejimai:</span>${movesCount}`;
+    moves.innerHTML = `<span>Spejimu skaicius:</span>${movesCount}`;
   };
 

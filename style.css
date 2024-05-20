@@ -53,6 +53,14 @@
     font-size: 20px;
     border-radius: 20px 0px 0px 20px;
 }
+
+#priimti{
+    width: 18%;
+    height: 30%;
+    font-size: 20px;
+    border-radius: 0px 20px 20px 0px;
+}
+
 #main-menu {
     position: fixed;
     bottom: 0;
@@ -191,6 +199,7 @@
     width: 20%;
     height: 80%;
     border-radius: 50px;
+    background-position: center;
 }
 
 #ejimai, #laikas {
@@ -203,9 +212,8 @@
     border-radius: 50px; 
 }
 
-#priimti{
-    width: 18%;
-    height: 30%;
-    font-size: 20px;
-    border-radius: 0px 20px 20px 0px;
+end-screen {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
 }
