@@ -26,25 +26,23 @@ startButton.addEventListener("click", () => {
     video.classList.add("hide");
     wrapper.classList.remove("hide");
     interval = setInterval(timeGenerator, 1000);
-    console.log(numeris);
 });
 
 asnwerButton.addEventListener("click", () => {
   const inputValue = spejimas.value;
   spejimas.value = Number;
   spejimas.value = "";
-  console.log(inputValue);
   movesCounter ();
   if (inputValue == numeris) {
     endGame ();
   };
   if (inputValue > numeris){
-    rodykle.style.backgroundImage="url(zalia.png)";
+    rodykle.style.backgroundImage="url(raudona.png)";
     rodykle.style.backgroundColor = "black";
   }
   else if (inputValue < numeris) {
     rodykle.style.backgroundColor = "black";
-    rodykle.style.backgroundImage="url(raudona.png)";
+    rodykle.style.backgroundImage="url(zalia.png)";
   }
   if (Math.abs(inputValue - numeris)<= 25) {
     spalva.style.backgroundColor = "green";

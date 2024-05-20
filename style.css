@@ -210,6 +210,9 @@
     border-width: 5px;
     border-style: solid;
     border-radius: 50px; 
+    text-align: center;
+    padding-top: 15px;
+    font-size: 28px;
 }
 
 end-screen {
