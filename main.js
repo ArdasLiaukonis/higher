@@ -12,6 +12,9 @@ const asnwerButton = document.getElementById("priimti");
 const endScreen = document.getElementById("end-screen");
 const rodykle = document.getElementById("rodykle");
 const spalva = document.getElementById("spalva");
+const rezultatai = document.getElementById("rezultatai");
+const menuButton = document.getElementById("menu-btn");
+const results = document.getElementById("results-container");
 
 
 let seconds = 0, minutes = 0;
@@ -56,9 +59,13 @@ asnwerButton.addEventListener("click", () => {
 });
 
 const endGame = () => {
+  mainMenu.classList.add("hide");
+  video.classList.add("hide");
   wrapper.classList.remove("wrapper");
   wrapper.classList.add("hide");
   endScreen.classList.remove("hide");
+  results.classList.remove("hide");
+  rezultatai.innerHTML = `<span>Spejimu skaicius:</span>${movesCount}`;
 };
 
 
@@ -77,6 +84,7 @@ backButton.addEventListener("click", () =>{
 })
 
 
+
 const timeGenerator = () => {
     seconds += 1;
     if (seconds >= 60) {
@@ -92,3 +100,9 @@ const timeGenerator = () => {
     moves.innerHTML = `<span>Spejimu skaicius:</span>${movesCount}`;
   };
 
+  menuButton.addEventListener("click", () => {
+    endScreen.classList.add("hide");
+    mainMenu.classList.remove("hide");
+    video.classList.remove("hide");
+    results.classList.add("hide");
+  });
