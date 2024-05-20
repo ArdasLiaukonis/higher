@@ -28,6 +28,7 @@ startButton.addEventListener("click", () => {
     mainMenu.classList.add("hide");
     video.classList.add("hide");
     wrapper.classList.remove("hide");
+    endScreen.style.display = "none";
     interval = setInterval(timeGenerator, 1000);
 });
 
@@ -61,8 +62,7 @@ asnwerButton.addEventListener("click", () => {
 const endGame = () => {
   mainMenu.classList.add("hide");
   video.classList.add("hide");
-  wrapper.classList.remove("wrapper");
-  wrapper.classList.add("hide");
+  wrapper.style.display = "none";
   endScreen.classList.remove("hide");
   results.classList.remove("hide");
   rezultatai.innerHTML = `<span>Spejimu skaicius:</span>${movesCount}`;
@@ -73,8 +73,8 @@ rulesButton.addEventListener("click", () => {
     mainMenu.classList.add("hide");
     video.classList.add("hide");
     taisykles.classList.remove("hide");
-    wrapper.classList.remove("wrapper");
-    wrapper.classList.add("hide");
+    endScreen.style.display = "none";
+    wrapper.style.display = "none";
 });
 
 backButton.addEventListener("click", () =>{
